@@ -22,4 +22,15 @@ cp ./git/.gitignore ~/.gitignore
 cp ./git/.gitconfig ~/.gitconfig
 
 echo "[5/5] Installing warp"
-brew install --cask warp
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    brew install --cask warp
+elif [[ -f /usr/lib/os-release ]] && grep -q "bluefin" /usr/lib/os-release; then
+    # Bluefin Linux - download AppImage
+    mkdir -p ~/.local/bin
+    curl -L -o ~/Downloads "https://app.warp.dev/download?package=appimage" -o Warp-x64.AppImage
+    chmod +x ~/Downloads/Warp-x64.AppImage
+    echo "You will need to do some manual config of the warp AppImage"
+else
+    echo "Unsupported OS for Warp installation. Please install manually."
+fi
