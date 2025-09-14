@@ -2,4 +2,10 @@
 	email = nessajane@nessajane.tech
 	name = Nessa Jane Marin
 [push]
-	default = current
+  default = current
+[difftool]
+  prompt = false
+[diff]
+  tool = nvimdiff
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
