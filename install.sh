@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "[0/6] Installing homebrew"
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
