@@ -1,5 +1,5 @@
 echo "[0/6] Installing homebrew"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "[1/6] Installing atuin"
 bash <(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)
