@@ -1,4 +1,5 @@
-chsh -s /usr/bin/zsh
+echo "[0/5] Installing homebrew"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "[1/5] Installing LazyVim"
 brew install neovim
