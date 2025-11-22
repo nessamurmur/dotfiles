@@ -13,12 +13,8 @@ echo "[2/6] Installing LazyVim"
 brew install neovim
 
 # LazyVim
-git clone http://github.com/LazyVim/starter ~/.config/nvim
-
-echo "[3/6] Installing oh-my-post"
-# oh-my-post
-brew install jandedobbeleer/oh-my-posh/oh-my-posh
-oh-my-posh font install hack
+echo "[3/6] Setting up LazyVim"
+git clone http://github.com/LazyVim/starter ~/.config/nvim/
 
 echo "[4/6] Copying zsh config"
 cp ./zsh/.exports ~/.exports
