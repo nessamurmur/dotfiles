@@ -1,5 +1,5 @@
 # for zed and other things
-export PATH=/home/nj/.local/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
 
 # atuin
 source $HOME/.atuin/bin/env zsh
