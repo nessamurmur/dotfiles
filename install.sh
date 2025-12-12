@@ -26,16 +26,6 @@ echo "[5/6] Copying git config"
 cp ./git/.gitignore ~/.gitignore
 cp ./git/.gitconfig ~/.gitconfig
 
-echo "[6/6] Installing warp"
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  # macOS
-  brew install --cask warp
-elif [[ -f /usr/lib/os-release ]] && grep -q "bluefin" /usr/lib/os-release; then
-  # Bluefin Linux - download AppImage
-  mkdir -p ~/.local/bin
-  curl -L -o ~/Downloads "https://app.warp.dev/download?package=appimage" -o Warp-x64.AppImage
-  chmod +x ~/Downloads/Warp-x64.AppImage
-  echo "You will need to do some manual config of the warp AppImage"
-else
-  echo "Unsupported OS for Warp installation. Please install manually."
+echo "[6/6] Installing claude code"
+  curl -fsSL https://claude.ai/install.sh | bash
 fi
