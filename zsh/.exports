@@ -11,3 +11,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # brew env
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+eval "$(rv shell init zsh)"
+eval "$(rv shell completions zsh)"
