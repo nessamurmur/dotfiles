@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "[1/6] Installing packages"
-paru -S noctalia-shell neovim flatpak scrcpy krita studio-one-7
+paru -S noctalia-shell neovim code flatpak scrcpy krita studio-one-7
 
 echo "[2/6] Installing atuin"
 bash <(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)
