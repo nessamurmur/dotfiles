@@ -22,6 +22,9 @@ cp ./zsh/.aliases ~/.aliases
 echo 'source ~/.exports' >>~/.zshrc
 echo 'source ~/.aliases' >>~/.zshrc
 
+echo "[4.1/6 Copying niri config]"
+cp config/niri/config.kdl ~/.config/niri/config.kdl
+
 echo "[5/6] Copying git config"
 cp ./git/.gitignore ~/.gitignore
 cp ./git/.gitconfig ~/.gitconfig
