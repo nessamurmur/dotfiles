@@ -39,9 +39,9 @@ binds {
 
     // ─── Applications ───
     MOD+RETURN                          hotkey-overlay-title="Open Terminal: alacritty" { spawn-sh "alacritty"; }
-    MOD+SPACE                           hotkey-overlay-title="Open App Launcher: wofi" { spawn-sh "wofi"; }
+    MOD+SPACE                           hotkey-overlay-title="Open App Launcher: wofi" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     MOD+B                               hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox"; }
-    MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
+    MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
     
     // Please choose your own file manager
     MOD+E                             hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "nautilus"; }
@@ -168,7 +168,6 @@ binds {
     spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
     spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
     spawn-sh-at-startup "swww img /usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png" // Set wallpaper
-    spawn-sh-at-startup "waybar" // Launch waybar
     spawn-at-startup "qs" "-c" "noctalia-shell"
 
     prefer-no-csd // Disable program decorations
@@ -267,3 +266,4 @@ binds {
         skip-at-startup
     }
 
+include "./noctalia.kdl"
