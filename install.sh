@@ -27,5 +27,4 @@ cp ./git/.gitignore ~/.gitignore
 cp ./git/.gitconfig ~/.gitconfig
 
 echo "[6/6] Installing claude code"
-  curl -fsSL https://claude.ai/install.sh | bash
-fi
+curl -fsSL https://claude.ai/install.sh | bash
