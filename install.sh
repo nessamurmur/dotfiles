@@ -1,16 +1,11 @@
 #!/bin/bash
 
-echo "[0/6] Installing homebrew"
-curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+echo "[1/6] Installing packages"
+paru -S noctalia-shell neovim flatpak scrcpy krita studio-one-7
 
-echo "[1/6] Installing atuin"
+echo "[2/6] Installing atuin"
 bash <(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)
 
-echo "[2/6] Installing LazyVim"
-brew install neovim
-
-# LazyVim
 echo "[3/6] Setting up LazyVim"
 git clone http://github.com/LazyVim/starter ~/.config/nvim/
 cp config/nvim/lua/plugins/rose-pine.lua ~/.config/nvim/lua/plugins/
