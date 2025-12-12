@@ -6,6 +6,9 @@ paru -S noctalia-shell neovim code flatpak scrcpy krita studio-one-7
 echo "[1.1/6] Install Ruby"
 curl --proto '=https' --tlsv1.2 -LsSf https://github.com/spinel-coop/rv/releases/download/v0.3.0/rv-installer.sh | sh
 
+echo "[1.2/6 Install Python]"
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 echo "[2/6] Installing atuin"
 bash <(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)
 
