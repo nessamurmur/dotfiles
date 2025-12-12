@@ -13,6 +13,7 @@ brew install neovim
 # LazyVim
 echo "[3/6] Setting up LazyVim"
 git clone http://github.com/LazyVim/starter ~/.config/nvim/
+cp config/nvim/lua/plugins/rose-pine.lua ~/.config/nvim/lua/plugins/
 
 echo "[4/6] Copying zsh config"
 cp ./zsh/.exports ~/.exports
