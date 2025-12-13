@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "[1/6] Installing packages"
-paru -S noctalia-shell neovim code go elixir zig flatpak scrcpy krita
+paru -S noctalia-shell ghostty neovim code go elixir zig flatpak scrcpy krita
 
 echo "[1.1/6] Install Ruby"
 curl --proto '=https' --tlsv1.2 -LsSf https://github.com/spinel-coop/rv/releases/download/v0.3.0/rv-installer.sh | sh
@@ -24,6 +24,9 @@ echo 'source ~/.aliases' >>~/.zshrc
 
 echo "[4.1/6 Copying niri config]"
 cp config/niri/config.kdl ~/.config/niri/config.kdl
+
+echo "[4.2/6 Copying ghostty config]"
+cp config/ghostty/config ~/.config/ghostty/config
 
 echo "[5/6] Copying git config"
 cp ./git/.gitignore ~/.gitignore
