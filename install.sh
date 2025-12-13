@@ -9,6 +9,9 @@ curl --proto '=https' --tlsv1.2 -LsSf https://github.com/spinel-coop/rv/releases
 echo "[1.2/6 Install Python]"
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
+echo "[1.3/6 Install bun]"
+curl -fsSL https://bun.sh/install | bash
+
 echo "[2/6] Installing atuin"
 bash <(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)
 
