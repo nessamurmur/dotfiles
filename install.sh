@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "[1/6] Installing packages"
-paru -S noctalia-shell ghostty neovim code go elixir zig flatpak scrcpy krita
+brew install neovim go elixir zig scrcpy
 
 echo "[1.1/6] Install Ruby"
 curl --proto '=https' --tlsv1.2 -LsSf https://github.com/spinel-coop/rv/releases/download/v0.3.0/rv-installer.sh | sh
