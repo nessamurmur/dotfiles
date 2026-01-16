@@ -31,6 +31,9 @@ cp config/niri/config.kdl ~/.config/niri/config.kdl
 echo "[4.2/6 Copying ghostty config]"
 cp config/ghostty/config ~/.config/ghostty/config
 
+echo "[4.3/6 Copying starship config]"
+cp config/starship.toml ~/.config/starship.toml
+
 echo "[5/6] Copying git config"
 cp ./git/.gitignore ~/.gitignore
 cp ./git/.gitconfig ~/.gitconfig
